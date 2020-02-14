@@ -1,0 +1,46 @@
+<section id="tabla" style="margin-top: 60px;">
+    <div>
+        <button  type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">Agregar</button>
+        <hr>
+    </div>
+    <div>
+        <ng-data-table class="table"
+  [id]="'sales_products_overview_03'"
+  [title]="'tabla'"
+  [items]="personas"
+  [indexColumnTitle]="'#'"
+  [showIndexColumn]="false"
+  [indexColumnWidth]="130">
+
+  <ng-data-table-column
+    [field]="'nombre'"
+    [title]="'Nombre'"
+    [width]="150">
+  </ng-data-table-column>
+  <button class="btn btn-danger">actualizar</button>
+  
+
+  <ng-data-table-column
+    [field]="'apellido'"
+    [title]="'Apellido'"
+    [sortable]="true"
+    [width]="150">
+  </ng-data-table-column>
+
+  <ng-data-table-column
+    [field]="'dni'"
+    [title]="'Dni'"
+    [filterable]="false"
+    [width]="100">
+  </ng-data-table-column>
+
+  <td>
+    <button  type="button" class="btn btn-danger">Eliminar</button>
+
+</td>
+
+</ng-data-table>
+
+    </div>
+  </section>
+<app-modal></app-modal>

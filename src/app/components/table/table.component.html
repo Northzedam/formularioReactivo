@@ -1,0 +1,35 @@
+<section id="tabla" style="margin-top: 60px;">
+    <div>
+        <button  type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">Agregar</button>
+        <hr>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">DNI</th>
+  
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of personas">
+                    <td>{{i.id}}</td>
+                    <td>{{i.nombre}}</td>
+                    <td>{{i.apellido}}</td>
+                    <td>{{i.dni}}</td>
+  
+                    <td>
+                        <button type="button" class="btn btn-danger" (click)="delete(i.id)">Eliminar</button>
+                   &nbsp;
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" (click)="onPreUpdatePersona(i)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
+  <app-modal></app-modal>
